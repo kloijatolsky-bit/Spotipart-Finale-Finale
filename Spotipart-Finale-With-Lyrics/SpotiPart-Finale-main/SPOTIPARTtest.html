@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotipart - Music Player</title>
+    <link rel="stylesheet" href="SPOTIPARTtest.css">
+</head>
+
+<body>
+    <div class="app-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h1 class="logo">WeeWee</h1>
+
+            <nav class="nav-links">
+                <a href="#" class="active">🏠 Home</a>
+                <a href="#">🔍 Search</a>
+                <a href="#">📚 Library</a>
+            </nav>
+
+            <div class="playlists">
+                <button id="createPlaylistBtn">+ New Playlist</button>
+                <ul>
+                    <li>Favorites</li>
+                    <li>Chill Vibes</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <header class="top-bar">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search song or artist..."
+                >
+                <div class="user-badge">Aparrt69</div>
+            </header>
+
+            <!-- FEATURED PLAYLIST -->
+            <section class="hero-banner">
+                <div class="hero-art">🎵</div>
+                <div class="hero-text">
+                    <span class="tag">FEATURED PLAYLIST</span>
+                    <h2>SPOTIPAPART!</h2>
+                    <p>Curated for coding, study, and relaxing.</p>
+                    <button id="playAllBtn" class="primary-btn">▶ Play All</button>
+                </div>
+            </section>
+
+            <!-- SYNCHRONIZED LYRICS -->
+            <section class="lyrics-section">
+                <div class="lyrics-header">
+                    <span class="tag">NOW PLAYING</span>
+                    <h2>Lyrics</h2>
+                </div>
+
+                <div id="lyricsContainer" class="lyrics-container" aria-live="polite">
+                    <p class="lyrics-placeholder">Play a song to see its lyrics...</p>
+                </div>
+            </section>
+
+            <!-- SONG LIST -->
+            <section class="tracks-section">
+                <h2 class="section-title">Your Songs</h2>
+
+                <div class="tracks-header">
+                    <span>#</span>
+                    <span>Title &amp; Artist</span>
+                    <span>Album</span>
+                    <span>Duration</span>
+                </div>
+
+                <div id="tracksContainer" class="tracks-list">
+                    <!-- JavaScript displays songs here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- BOTTOM MUSIC PLAYER -->
+    <footer class="player-bar">
+        <div class="now-playing">
+            <div id="playerArt" class="player-art">🎵</div>
+            <div class="song-info">
+                <strong id="playerTitle">Select a track</strong>
+                <p id="playerArtist">Spotipart Player</p>
+            </div>
+        </div>
+
+        <div class="player-controls">
+            <div class="control-btns">
+                <button id="prevBtn" title="Previous">⏮</button>
+                <button id="playBtn" class="play-circle" title="Play">▶</button>
+                <button id="nextBtn" title="Next">⏭</button>
+            </div>
+
+            <div class="progress-wrap">
+                <span id="currentTime">0:00</span>
+                <input type="range" id="progressBar" value="0" min="0" max="100">
+                <span id="totalDuration">0:00</span>
+            </div>
+        </div>
+
+        <div class="volume-wrap">
+            <span>🔊</span>
+            <input type="range" id="volumeBar" value="80" min="0" max="100">
+        </div>
+    </footer>
+
+    <script src="SPOTIPARTtest,js"></script>
+</body>
+</html>
